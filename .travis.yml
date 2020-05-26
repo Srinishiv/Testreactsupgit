@@ -6,4 +6,4 @@ before_install:
  - docker build -t suptest -f Dockerfile.dev .
  
 script:
- - docker run suptest npm run test -- --coverage
+ - docker run -e CI=true suptest npm run test
